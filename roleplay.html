@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+
+    <title>Comic Book Strip</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="role.css">
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/mwemalogo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">MWEMA</span>
+                
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <!-- <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li> -->
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="home2.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="community2.html">
+                            <i class="bx bx-chat icon" ></i>
+                            <span class="text nav-text">Communities<span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nav-link">
+                        <a href="help2.html">
+                            <i class='bx bx-help-circle icon' ></i>
+                            <span class="text nav-text">Help</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="home2.html">
+                        <i class='bx bx-arrow-back icon' ></i>
+                        <span class="text nav-text">Back</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+   
+
+<body>
+    <div class="scenario-container">
+        <h1>Role-Playing Scenarios</h1>
+        <div id="scenario">
+            <div class="scenario" data-id="1">
+                <h2>Scenario 1</h2>
+                <p>Your friend offers you a cigarette after school. What do you do?</p>
+                <button onclick="chooseOption(1, 'accept')">Accept it and try it out.</button>
+                <button onclick="chooseOption(1, 'refuse')">Refuse politely and explain why.</button>
+                <button onclick="chooseOption(1, 'ignore')">Ignore and walk away.</button>
+            </div>
+            <div class="scenario" data-id="2" style="display:none;">
+                <h2>Scenario 2</h2>
+                <p>Your friends are smoking at a party and ask you to join. What do you do?</p>
+                <button onclick="chooseOption(2, 'accept')">Join them to fit in.</button>
+                <button onclick="chooseOption(2, 'refuse')">Refuse and suggest a different activity.</button>
+                <button onclick="chooseOption(2, 'leave')">Leave the party.</button>
+            </div>
+            <div class="scenario" data-id="3" style="display:none;">
+                <h2>Scenario 3</h2>
+                <p>A classmate offers you a cigarette in the school bathroom. What do you do?</p>
+                <button onclick="chooseOption(3, 'accept')">Take the cigarette and smoke it.</button>
+                <button onclick="chooseOption(3, 'refuse')">Say no and leave the bathroom immediately.</button>
+                <button onclick="chooseOption(3, 'confront')">Tell them smoking is bad and confront them.</button>
+            </div>
+            <div class="scenario" data-id="4" style="display:none;">
+                <h2>Scenario 4</h2>
+                <p>Your best friend starts smoking and wants you to join. What do you do?</p>
+                <button onclick="chooseOption(4, 'join')">Join them to maintain your friendship.</button>
+                <button onclick="chooseOption(4, 'refuse')">Refuse and talk to them about quitting.</button>
+                <button onclick="chooseOption(4, 'avoid')">Avoid your friend from now on.</button>
+            </div>
+            <div class="scenario" data-id="5" style="display:none;">
+                <h2>Scenario 5</h2>
+                <p>You find a group of kids smoking behind the school. They invite you over. What do you do?</p>
+                <button onclick="chooseOption(5, 'join')">Join them to make new friends.</button>
+                <button onclick="chooseOption(5, 'refuse')">Refuse and walk away.</button>
+                <button onclick="chooseOption(5, 'tell')">Tell them you will join them later</button>
+            </div>
+        </div>
+        <div id="result" class="result"></div>
+        <div id="result-image" class="result-image"></div>
+        <button id="restart-button" style="display:none;" onclick="restartGame()">Restart</button>
+
+    </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
+
+   
+    <script src="navigate.js"></script>
+
+    <script src="role.js"></script>
+    <script src="sidebar.js"> </script>
+
+</body>
+</html>
