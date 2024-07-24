@@ -6,7 +6,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --linux deb" 
+    "dist": "electron-builder --linux deb"
   },
   "author": {
     "name": "Stephanie",
@@ -21,27 +21,26 @@
     "electron-builder": "^24.13.3",
     "electron-installer-debian": "^3.2.0"
   },
+  "homepage": "https://github.com/Tephyny/Mwema",
   "build": {
     "appId": "com.yourcompany.mwema",
     "productName": "Mwema App",
-    "homepage": "https://github.com/Tephyny/Mwema/index.html",
     "directories": {
-      "output": "release" 
+      "output": "dist"
     },
     "linux": {
-      "target": ["deb"],
-      "category": "Utility", 
-      "icon": "renderer/images/mwemalogo.png",
-      "maintainer": {
-        "name": "Stephanie",
-        "email": "sshawa48@gmail.com"
-      }
+      "target": [
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "renderer/images/logo4.png",
+      "maintainer": null
     },
     "files": [
       "dist/**/*",
       "main.js",
-      "package.json"
-    
+      "package.json",
+      "renderer/**/*"
     ]
   }
 }
