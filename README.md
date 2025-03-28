@@ -1,6 +1,6 @@
 # Mwema - Kids Character Development App
 
-Mwema is an engaging desktop application designed to help children build character and life skills through interactive exercises. The app allows parents or educators to track progress and ensure that kids are learning good values while having fun.
+Mwema is an engaging desktop application designed to help children build character and life skills through interactive exercises. The app allows kids to learn through comics and fun activities.
 
 ## Screenshots
 ![Mwema Screenshot 1](images/mwema_screenshot1.png)  
