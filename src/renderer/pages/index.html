@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mwema - Kids App</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/global.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Main Landing Container -->
+    <div class="landing-container">
+
+        <!-- Animated Background Blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
+        <!-- Main Content -->
+        <div class="landing-content">
+            <h1 class="welcome-title">Welcome to<br>Mwema</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2.5rem; color: var(--text-muted);">
+                A fun and safe place to learn and play!
+            </p>
+            <button id="lets-go-btn" class="cta-button">
+                Let's Go! <i class='bx bx-rocket'></i>
+            </button>
+        </div>
+
+        <!-- Illustration (Reusing existing asset path but cleaner markup) -->
+        <div class="landing-illustration">
+            <img src="../assets/images/image1.jpg" style="border-radius: 30px;" alt="Happy kid learning">
+        </div>
+
+    </div>
+
+    <!-- Age Selection Modal -->
+    <div id="modal" class="modal-overlay">
+        <div class="glass-card age-modal">
+            <span class="modal-close"><i class='bx bx-x'></i></span>
+
+            <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--primary);">Hello Friend! 👋</h2>
+            <p style="font-size: 1.1rem; color: var(--text-muted);">How old are you?</p>
+
+            <div id="option-list" class="age-grid">
+                <!-- Data attributes used for logic -->
+                <div class="age-option" data-number="1">1</div>
+                <div class="age-option" data-number="2">2</div>
+                <div class="age-option" data-number="3">3</div>
+                <div class="age-option" data-number="4">4</div>
+                <div class="age-option" data-number="5">5</div>
+                <div class="age-option" data-number="6">6</div>
+                <div class="age-option" data-number="7">7</div>
+                <div class="age-option" data-number="8">8</div>
+                <div class="age-option" data-number="9">9</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../scripts/age.js"></script>
+
+</body>
+
+</html>

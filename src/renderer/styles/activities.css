@@ -1,0 +1,183 @@
+/* ===========================
+   Activities CSS
+   Consolidates styles for Comics, Videos, Roleplay, and Matching Game
+   =========================== */
+
+/* Comic Strip */
+.comic-strip-container {
+    text-align: center;
+    /* Position and width now handled by global.css */
+    margin-top: 2rem;
+}
+
+.comic-strip {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.comic-panel {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.comic-panel.previous {
+    transform: rotateY(-180deg);
+}
+
+.comic-panel.next {
+    transform: rotateY(180deg);
+}
+
+.comic-panel.active {
+    transform: rotateY(0deg);
+    z-index: 1;
+}
+
+.navigation-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-btn {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.nav-btn:hover {
+    background: var(--primary-color-light);
+}
+
+/* Video Player */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.video-wrapper video {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: var(--primary-color-light);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+/* Matching Game */
+.matching-game-container {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.matching-game-categories {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.matching-category {
+    flex: 1;
+    min-height: 200px;
+    padding: 1rem;
+    border: 2px dashed var(--primary-color);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 1rem;
+}
+
+.matching-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.draggable-item {
+    padding: 1rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: grab;
+    user-select: none;
+}
+
+.draggable-item:active {
+    cursor: grabbing;
+}
+
+/* Roleplay / Scenario */
+.scenario-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: var(--sidebar-color);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.scenario-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.scenario-options button {
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    background: var(--primary-color-light);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.scenario-options button:hover {
+    transform: scale(1.05);
+}
+
+.scenario-result {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
