@@ -19,16 +19,16 @@ Mwema is an engaging desktop application designed to help children build charact
 
 ## Screenshots
 
-![Mwema Screenshot 1](images/mwema_screenshot1.png)  
+![Mwema Screenshot 1](src/renderer/assets/images/mwema_screenshot1.png)  
 *Landing page when app opens.*
 
-![Mwema Screenshot 2](images/mwema_screenshot2.png)  
+![Mwema Screenshot 2](src/renderer/assets/images/mwema_screenshot2.png)  
 *Character development exercise in progress.*
 
-![Mwema Screenshot 3](images/mwema_screenshot3.png)  
+![Mwema Screenshot 3](src/renderer/assets/images/mwema_screenshot3.png)  
 *Comic book section of app.*
 
-![Mwema Screenshot 4](images/mwema_screenshot4.png)  
+![Mwema Screenshot 4](src/renderer/assets/images/mwema_screenshot4.png)  
 *Activity section of app.*
 
 ---
@@ -56,7 +56,7 @@ Mwema is an engaging desktop application designed to help children build charact
 
 ### Prerequisites
 
-- **Node.js** and **npm** must be installed. [Download Node.js](https://nodejs.org/)
+- **Node.js** and **pnpm** must be installed. [Download Node.js](https://nodejs.org/) and [Install pnpm](https://pnpm.io/installation)
 
 ### Steps
 
@@ -64,16 +64,19 @@ Mwema is an engaging desktop application designed to help children build charact
 2. **Navigate** to the project folder using your terminal/command prompt:
    ```bash
    cd your-repository-folder
+   ```
 
 3. **Install** the required dependencies:
    ```bash
-   npm install
+   pnpm install
+   ```
 4. **Run** the app:
    ```bash
-   npm start
+   pnpm start
+   ```
 ---
 ## Usage
-1. **Launch** the app by running `npm start`.
+1. **Launch** the app by running `pnpm start`.
 2. **Navigate** through the different sections using the menu.
 3. **Engage** in the activities and learn through the comics.
 4. **Track** your progress and achievements.
