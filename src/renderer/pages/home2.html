@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
 
-    <title>Comic Book 1</title>
+    
+    
+    <link rel="stylesheet" href="../styles/global.css">
+    
+    
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
-    <link rel="stylesheet" href="comic1.css">
+    
+  
 </head>
 <body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="images/mwemalogo.png" alt="">
+                    <img src="../assets/images/mwemalogo.png" alt="">
                 </span>
 
                 <div class="text logo-text">
@@ -30,10 +35,10 @@
         <div class="menu-bar">
             <div class="menu">
 
-                <!-- <li class="search-box">
+                <li class="search-box">
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Search...">
-                </li> -->
+                </li>
 
                 <ul class="menu-links">
                     <li class="nav-link">
@@ -45,8 +50,8 @@
 
                     <li class="nav-link">
                         <a href="community2.html">
-                            <i class="bx bx-chat icon" ></i>
-                            <span class="text nav-text">Communities<span>
+                            <i class="bx bx-folder icon" ></i>
+                            <span class="text nav-text">Resources<span>
                         </a>
                     </li>
 
@@ -69,7 +74,7 @@
 
             <div class="bottom-content">
                 <li class="">
-                    <a href="home2.html">
+                    <a href="index.html">
                         <i class='bx bx-arrow-back icon' ></i>
                         <span class="text nav-text">Back</span>
                     </a>
@@ -91,37 +96,84 @@
         </div>
 
     </nav>
-    <div class="comic-strip-container">
-     <h2>Smart Media Choices</h2> 
-        <div class="comic-strip">
-            <div class="comic-panel active" style="background-image: url('images/comic2/Strip1.png');" data-caption="Page 1"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip2.png');" data-caption="Page 2"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip3.png');" data-caption="Page 3"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip4.png');" data-caption="Page 4"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip5.png');" data-caption="Page 5"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip6.png');" data-caption="Page 6"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip7.png');" data-caption="Page 7"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip8.png');" data-caption="Page 8"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip9.png');" data-caption="Page 9"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip10.png');" data-caption="Page 10"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip11.png');" data-caption="Page 11"></div>
-            <div class="comic-panel" style="background-image: url('images/comic2/Strip12.png');" data-caption="Page 12"></div>
 
+    
 
+    <section class="home">
+
+        <h3 >Comics</h3>
+    <div class="separator"></div>
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../assets/images/comic1/Comicover.png" alt="">
+            <h3><a href="comic1.html">Smart Media Choices</a></h3>
+            <p>Join Anna and Louis Learn how to navigate the digital landscape responsibly.</p>
+            
         </div>
-        <div class="caption" id="caption"></div>
-        <div class="navigation">
-            <div class="arrow left-arrow" id="prev-arrow">&#9664;</div>
-            <!-- <a href="matchgame.html" class="btn">Go to Activity</a> -->
 
-            <div class="arrow right-arrow" id="next-arrow">&#9654;</div>
-        </div>
+
+         <div class="box">
+        <img src="../assets/images/comic2/Comicover.png" alt="">
+        <h3><a href ="comic2.html">Handling Peer Pressure</a></h3>
+        <p>Learn with Lemaron how to handle bad peer pressure</p>
+        
+         </div>
+
     </div>
+    </section>
 
-    <script src="navigate.js"></script>
+    <section class="home">
 
-    <script src="comic1.js"></script>
-    <script src="sidebar.js"> </script>
+        <h3 >Videos</h3>
+    <div class="separator"></div>
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../assets/images/thumbnail1.png" alt="">
+            <h3><a href ="video1.html">Smart Media Choices</a></h3>
+            <!-- <p>Join Anna and Learn how to navigate the digital landscape responsibly.</p> -->
+            
+        </div>
+
+
+         <div class="box">
+        <img src="../assets/images/thumbnail2.png" alt="">
+        <h3><a href="video2.html">Handling Peer Pressure</a></h3>
+        <!-- <p>Encouraging kids and teens on a smoke-free lifestyle.</p> -->
+        
+         </div>
+    </div>
+    </section>
+
+
+    <section class="home">
+
+        <h3 >Activities</h3>
+    <div class="separator"></div>
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../assets/images/MatchingActivity.png" alt="">
+            <h3><a href="match.html">Matching Game</a></h3>
+            <p>Let's match the good and bad Internet Safety options.</p>
+        </div>
+
+
+         <div class="box">
+        <img src="../assets/images/RolePlayingActivity.png" alt="">
+        <h3><a href ="roleplay.html">Breath of Fresh Air</a></h3>
+        <p>Let's help Lemaron make the right choices.</p>
+        
+         </div>
+
+    </div>
+    </section>
+
+
+    <script src="../scripts/sidebar.js"> </script>
+    <script src="../scripts/navigate.js"></script>
+
 
 </body>
 </html>

@@ -50,7 +50,7 @@ function createMainWindow() {
         mainWindow.webContents.openDevTools();
     }
 
-    mainWindow.loadFile(path.join(__dirname, './renderer/index.html'));
+    mainWindow.loadFile(path.join(__dirname, '../renderer/pages/index.html'));
 }
 
 // App is ready
@@ -84,5 +84,5 @@ app.on('window-all-closed', () => {
 
 // IPC event handler to navigate to different pages
 ipcMain.on('navigate', (event, page) => {
-    mainWindow.loadFile(path.join(__dirname, 'renderer',`${page}`));
+    mainWindow.loadFile(path.join(__dirname, `../renderer/pages/${page}`));
 });

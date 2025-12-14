@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,21 @@
     <title>Comic Book 1</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="comic1.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/activities.css">
 </head>
+
 <body>
     <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <img src="images/mwemalogo.png" alt="">
+                    <img src="../assets/images/mwemalogo.png" alt="">
                 </span>
 
                 <div class="text logo-text">
                     <span class="name">MWEMA</span>
-                
+
                 </div>
             </div>
 
@@ -37,14 +40,14 @@
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="home2.html">
-                            <i class='bx bx-home-alt icon' ></i>
+                            <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">Home</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
                         <a href="community2.html">
-                            <i class="bx bx-chat icon" ></i>
+                            <i class="bx bx-chat icon"></i>
                             <span class="text nav-text">Communities<span>
                         </a>
                     </li>
@@ -58,7 +61,7 @@
 
                     <li class="nav-link">
                         <a href="help2.html">
-                            <i class='bx bx-help-circle icon' ></i>
+                            <i class='bx bx-help-circle icon'></i>
                             <span class="text nav-text">Help</span>
                         </a>
                     </li>
@@ -69,7 +72,7 @@
             <div class="bottom-content">
                 <li class="">
                     <a href="home2.html">
-                        <i class='bx bx-arrow-back icon' ></i>
+                        <i class='bx bx-arrow-back icon'></i>
                         <span class="text nav-text">Back</span>
                     </a>
                 </li>
@@ -85,25 +88,36 @@
                         <span class="switch"></span>
                     </div>
                 </li>
-                
+
             </div>
         </div>
 
     </nav>
     <div class="comic-strip-container">
-     <h2>Smart Media Choices</h2> 
+        <h2>Smart Media Choices</h2>
         <div class="comic-strip">
-            <div class="comic-panel active" style="background-image: url('images/comic1/strip1.png');" data-caption="Page 1"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip2.png');" data-caption="Page 2"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip3.png');" data-caption="Page 3"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip4.png');" data-caption="Page 4"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip5.png');" data-caption="Page 5"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip6.png');" data-caption="Page 6"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip7.png');" data-caption="Page 7"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip8.png');" data-caption="Page 8"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip9.png');" data-caption="Page 9"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip10.png');" data-caption="Page 10"></div>
-            <div class="comic-panel" style="background-image: url('images/comic1/strip11.png');" data-caption="Page 11"></div>
+            <div class="comic-panel active" style="background-image: url('../assets/images/comic1/strip1.png');"
+                data-caption="Page 1"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip2.png');"
+                data-caption="Page 2"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip3.png');"
+                data-caption="Page 3"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip4.png');"
+                data-caption="Page 4"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip5.png');"
+                data-caption="Page 5"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip6.png');"
+                data-caption="Page 6"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip7.png');"
+                data-caption="Page 7"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip8.png');"
+                data-caption="Page 8"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip9.png');"
+                data-caption="Page 9"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip10.png');"
+                data-caption="Page 10"></div>
+            <div class="comic-panel" style="background-image: url('../assets/images/comic1/strip11.png');"
+                data-caption="Page 11"></div>
 
         </div>
         <div class="caption" id="caption"></div>
@@ -114,10 +128,11 @@
             <div class="arrow right-arrow" id="next-arrow">&#9654;</div>
         </div>
     </div>
-    <script src="navigate.js"></script>
+    <script src="../scripts/navigate.js"></script>
 
-    <script src="comic1.js"></script>
-    <script src="sidebar.js"> </script>
+    <script src="../scripts/comic1.js"></script>
+    <script src="../scripts/sidebar.js"> </script>
 
 </body>
+
 </html>

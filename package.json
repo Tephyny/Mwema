@@ -3,7 +3,7 @@
   "productName": "Mwema App",
   "version": "1.0.0",
   "description": "Mwema Kids Desktop app",
-  "main": "main.js",
+  "main": "src/main/main.js",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --linux deb"
@@ -17,8 +17,8 @@
     "toastify-js": "^1.12.0"
   },
   "devDependencies": {
-    "electron": "^31.0.2",
-    "electron-builder": "^24.13.3",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
     "electron-installer-debian": "^3.2.0"
   },
   "homepage": "https://github.com/Tephyny/Mwema",
@@ -33,14 +33,13 @@
         "deb"
       ],
       "category": "Utility",
-      "icon": "renderer/images/logo4.png",
+      "icon": "src/renderer/assets/images/logo4.png",
       "maintainer": null
     },
     "files": [
       "dist/**/*",
-      "main.js",
-      "package.json",
-      "renderer/**/*"
+      "src/**/*",
+      "package.json"
     ]
   }
 }
