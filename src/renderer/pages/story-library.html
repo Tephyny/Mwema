@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <title>Story Library</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/activities.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../assets/images/mwemalogo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MWEMA</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="home2.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="story-generator.html">
+                            <i class='bx bx-plus-circle icon'></i>
+                            <span class="text nav-text">Create Story</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="help2.html">
+                            <i class='bx bx-help-circle icon'></i>
+                            <span class="text nav-text">Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="home2.html">
+                        <i class='bx bx-arrow-back icon'></i>
+                        <span class="text nav-text">Back</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="home">
+        <div class="story-library-container">
+            <h1
+                style="font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(to right, var(--primary), var(--secondary)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                📚 Your Story Library
+            </h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">
+                All your magical stories in one place
+            </p>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="glass-card" style="padding: 3rem; text-align: center; display: none;">
+                <i class='bx bx-book-open' style="font-size: 5rem; color: var(--text-muted);"></i>
+                <h3 style="margin-top: 1rem; color: var(--text-main);">No stories yet!</h3>
+                <p style="color: var(--text-muted); margin-top: 0.5rem; margin-bottom: 2rem;">
+                    Create your first story to see it here.
+                </p>
+                <a href="story-generator.html" class="cta-button"
+                    style="display: inline-block; text-decoration: none; padding: 1rem 2rem;">
+                    ✨ Create a Story
+                </a>
+            </div>
+
+            <!-- Stories Grid -->
+            <div id="stories-grid" class="box-container">
+                <!-- Stories will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Story Detail Modal -->
+        <div id="story-modal" class="modal-overlay" style="display: none;">
+            <div class="glass-card age-modal" style="max-width: 700px; width: 90%; padding: 2rem;">
+                <span class="modal-close" id="close-modal">
+                    <i class='bx bx-x'></i>
+                </span>
+
+                <h2 id="modal-title" style="margin-bottom: 1rem; color: var(--primary);">📖 Story</h2>
+                <div id="modal-metadata" style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                </div>
+                <div id="modal-content"
+                    style="font-size: 1.1rem; line-height: 1.8; color: var(--text-main); white-space: pre-wrap; max-height: 400px; overflow-y: auto; margin-bottom: 2rem;">
+                </div>
+
+                <!-- TTS Controls -->
+                <div class="tts-controls" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button id="modal-play-btn" class="tts-btn"
+                        style="padding: 0.8rem 1.5rem; border-radius: var(--radius-round); background: var(--secondary); color: white; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class='bx bx-play'></i> Listen
+                    </button>
+                    <button id="modal-stop-btn" class="tts-btn"
+                        style="padding: 0.8rem 1.5rem; border-radius: var(--radius-round); background: var(--primary); color: white; border: none; cursor: pointer; display: none; align-items: center; gap: 0.5rem;">
+                        <i class='bx bx-stop'></i> Stop
+                    </button>
+                    <button id="modal-delete-btn" class="tts-btn"
+                        style="padding: 0.8rem 1.5rem; border-radius: var(--radius-round); background: #e74c3c; color: white; border: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class='bx bx-trash'></i> Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../scripts/sidebar.js"></script>
+    <script src="../scripts/story-library.js"></script>
+</body>
+
+</html>

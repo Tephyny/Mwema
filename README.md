@@ -36,10 +36,14 @@ Mwema is an engaging desktop application designed to help children build charact
 ## Features
 
 - **Interactive Learning:** Engages kids in various activities that promote character development.
+- **✨ Local AI Story Generator:** Personalized stories generated offline using TinyLlama AI.
+- **🗣️ Multi-Language TTS:** Stories read aloud in Swahili, English, and more using native system voices.
 - **Comics & Stories:** Fun comic book section to teach life lessons.
 - **Activity Section:** Hands-on exercises to reinforce positive behavior.
 - **Simple User Interface:** Easy-to-navigate interface suitable for kids.
-- **Progress Tracking:** (Optional: Add if implemented) Track children's progress and achievements.
+
+> [!IMPORTANT]
+> **New Feature**: For AI Story Generation & Text-to-Speech setup, please see [STORY-AI-SETUP.md](STORY-AI-SETUP.md).
 
 ---
 
