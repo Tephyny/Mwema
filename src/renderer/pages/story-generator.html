@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <title>Create Your Story</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/activities.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../assets/images/mwemalogo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MWEMA</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="home2.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="story-library.html">
+                            <i class='bx bx-book icon'></i>
+                            <span class="text nav-text">Story Library</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="help2.html">
+                            <i class='bx bx-help-circle icon'></i>
+                            <span class="text nav-text">Help</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="home2.html">
+                        <i class='bx bx-arrow-back icon'></i>
+                        <span class="text nav-text">Back</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="home">
+        <div class="story-generator-container">
+            <h1
+                style="font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(to right, var(--primary), var(--secondary)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                ✨ Create Your Story
+            </h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 2rem;">
+                Let AI write a personalized story just for you!
+            </p>
+
+            <!-- Model Download Section (shown if model not ready) -->
+            <div id="download-section" class="glass-card" style="padding: 2rem; margin-bottom: 2rem; display: none;">
+                <h3 style="margin-bottom: 1rem;">📦 Downloading AI Model...</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    We're downloading the storytelling AI (669 MB). This only happens once!
+                </p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="download-progress"></div>
+                </div>
+                <p id="download-status" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                    Starting download...
+                </p>
+            </div>
+
+            <!-- Story Generator Form -->
+            <div id="generator-form" class="glass-card" style="padding: 2.5rem; margin-bottom: 2rem;">
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="child-name"
+                        style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-main);">
+                        👤 What's your name?
+                    </label>
+                    <input type="text" id="child-name" name="child-name" placeholder="Enter your name"
+                        autocomplete="off" tabindex="1"
+                        style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 12px; font-size: 1rem; background-color: #ffffff; color: #2D3436;">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label for="value-select"
+                        style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-main);">
+                        🎯 What do you want to learn about?
+                    </label>
+                    <select id="value-select"
+                        style="width: 100%; padding: 1rem; border: 2px solid var(--glass-border); border-radius: var(--radius-sm); font-size: 1rem; background: white; cursor: pointer;">
+                        <option value="">Choose a value...</option>
+                        <option value="Honesty">Honesty - Always telling the truth</option>
+                        <option value="Integrity">Integrity - Doing what's right</option>
+                        <option value="Digital Safety">Digital Safety - Being safe online</option>
+                        <option value="Peer Pressure">Peer Pressure - Making good choices with friends</option>
+                        <option value="Respect">Respect - Being kind to others</option>
+                        <option value="Loyalty">Loyalty - Being a good friend</option>
+                        <option value="Trust">Trust - Keeping promises</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label for="tts-voice-select"
+                        style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-main);">
+                        🗣️ Story Language
+                    </label>
+                    <select id="tts-voice-select"
+                        style="width: 100%; padding: 1rem; border: 2px solid var(--glass-border); border-radius: var(--radius-sm); font-size: 1rem; background: white; cursor: pointer;">
+                        <option value="en">Loading languages...</option>
+                    </select>
+                </div>
+
+                <button id="generate-btn" class="cta-button" style="width: 100%; padding: 1.2rem; font-size: 1.2rem;">
+                    🪄 Generate My Story
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading-section" class="glass-card" style="padding: 3rem; text-align: center; display: none;">
+                <div class="loading-spinner"></div>
+                <h3 style="margin-top: 1.5rem; color: var(--primary);">Creating your magical story...</h3>
+                <p style="color: var(--text-muted); margin-top: 0.5rem;">This may take 20-30 seconds. Please wait!</p>
+            </div>
+
+            <!-- Story Display -->
+            <div id="story-display" class="glass-card" style="padding: 2.5rem; display: none;">
+                <h2 style="margin-bottom: 1rem; color: var(--primary);">
+                    📖 Your Story
+                </h2>
+                <div id="story-content"
+                    style="font-size: 1.1rem; line-height: 1.8; color: var(--text-main); white-space: pre-wrap; margin-bottom: 2rem;">
+                </div>
+
+                <!-- TTS Controls -->
+                <div class="tts-settings-row"
+                    style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 16px;">
+                    <div class="setting-group"
+                        style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 300px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <label style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600;">⚡ Reading
+                                Speed</label>
+                            <span id="speed-val"
+                                style="font-size: 0.9rem; color: var(--primary); font-weight: bold;">100%</span>
+                        </div>
+                        <input type="range" id="tts-speed-range" min="0.5" max="2.0" step="0.1" value="1.0"
+                            style="width: 100%; cursor: pointer; accent-color: var(--secondary);">
+                    </div>
+                </div>
+
+                <div class="tts-actions"
+                    style="display: flex; gap: 1rem; justify-content: center; align-items: center;">
+                    <button id="play-btn" class="tts-btn"
+                        style="padding: 0.8rem 2rem; border-radius: var(--radius-round); background: var(--secondary); color: white; border: none; font-size: 1rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class='bx bx-play'></i> Listen to Story
+                    </button>
+                    <button id="stop-btn" class="tts-btn"
+                        style="padding: 0.8rem 2rem; border-radius: var(--radius-round); background: var(--primary); color: white; border: none; font-size: 1rem; cursor: pointer; display: none; align-items: center; gap: 0.5rem;">
+                        <i class='bx bx-stop'></i> Stop
+                    </button>
+                    <button id="generate-new-btn" class="tts-btn"
+                        style="padding: 0.8rem 2rem; border-radius: var(--radius-round); background: var(--accent); color: var(--text-main); border: none; font-size: 1rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class='bx bx-refresh'></i> New Story
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../scripts/sidebar.js"></script>
+    <script src="../scripts/story-generator.js"></script>
+</body>
+
+</html>
